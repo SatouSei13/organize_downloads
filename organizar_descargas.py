@@ -14,12 +14,12 @@ ext_torrent = [".torrent"]
 os.chdir("C:/Users/satou/Downloads")
 downloads_path = "C:/Users/satou/Downloads/"
 
-def moveFile(extention_list, dest_folder):
+def move_files(extention_list, dest_folder):
     for i in extention_list:
         if file_ext == i:
             shutil.move(downloads_path + f, downloads_path + dest_folder)
 
-def filesToRemove(extention_list):
+def remove_files(extention_list):
     for i in extention_list:
         if file_ext == i:
             os.remove(downloads_path + f)
@@ -30,12 +30,12 @@ if __name__ == '__main__':
     for f in os.listdir():
         file_name, file_ext = os.path.splitext(f)
         #print(file_name, file_ext)
-        moveFile(ext_video, "Video")
-        moveFile(ext_foto, "Fotos")
-        moveFile(ext_app, "apk")
-        moveFile(ext_music, "Music")
-        moveFile(ext_compressed, "Compressed")
-        moveFile(ext_docs, "Documents")
-        filesToRemove(ext_torrent)
+        move_files(ext_video, "Video")
+        move_files(ext_foto, "Fotos")
+        move_files(ext_app, "apk")
+        move_files(ext_music, "Music")
+        move_files(ext_compressed, "Compressed")
+        move_files(ext_docs, "Documents")
+        remove_files(ext_torrent)
 
 
