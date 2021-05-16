@@ -24,6 +24,7 @@ def filesToRemove(extention_list):
         if file_ext == i:
             os.remove(downloads_path + f)
 
+
 if __name__ == '__main__':
     
     for f in os.listdir():
