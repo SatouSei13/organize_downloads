@@ -14,13 +14,13 @@ ext_torrent = [".torrent"]
 os.chdir("C:/Users/satou/Downloads")
 downloads_path = "C:/Users/satou/Downloads/"
 
-def moveFile(extentionList, destFolder):
-    for i in extentionList:
+def moveFile(extention_list, dest_folder):
+    for i in extention_list:
         if file_ext == i:
-            shutil.move(downloads_path + f, downloads_path + destFolder)
+            shutil.move(downloads_path + f, downloads_path + dest_folder)
 
-def filesToRemove(extentionList):
-    for i in extentionList:
+def filesToRemove(extention_list):
+    for i in extention_list:
         if file_ext == i:
             os.remove(downloads_path + f)
 
